@@ -114,3 +114,25 @@ public class NetworkedClient : MonoBehaviour
 
 
 }
+public static class ClientToServerSignifiers
+{
+    public const int CreateAccount = 1;
+    public const int Login = 2;
+    public const int JoinGammeRoomQueue = 3;
+    public const int PlayGame = 4;
+    public const int SendMsg = 5;
+    public const int SendPrefixMsg = 6;
+    public const int JoinAsObserver = 7;
+}
+public static class ServerToClientSignifiers
+{
+    public const int LoginComplete = 1;
+    public const int LoginFailed = 2;
+    public const int AccountCreationComplete = 3;
+    public const int AccountCreationFailed = 4;
+    public const int OpponentPlay = 5;
+    public const int GameStart = 6;
+    public const int ReceiveMsg = 7;
+    public const int someoneJoinedAsObserver = 8;
+
+}
