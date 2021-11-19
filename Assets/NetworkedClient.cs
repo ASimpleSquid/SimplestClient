@@ -164,9 +164,9 @@ public class NetworkedClient : MonoBehaviour
             gameSystemManager.GetComponent<GameSystemManager>().updateChat(csv[1]);
             gameSystemManager.GetComponent<GameSystemManager>().ChangeState(GameStates.TicTacToe);
         }
-        else if (signifier == ServerToClientSignifiers.someoneJoinedAsObserver)
+        else if (signifier == ServerToClientSignifiers.EnterObserver)
         {
-            gameSystemManager.GetComponent<GameSystemManager>().updateChat("Some one has joined as Observer " + csv[1]);
+            gameSystemManager.GetComponent<GameSystemManager>().updateChat("An Observer has joined" + csv[1]);
             gameSystemManager.GetComponent<GameSystemManager>().ChangeState(GameStates.TicTacToe);
         }
     }
@@ -197,6 +197,6 @@ public static class ServerToClientSignifiers
     public const int OpponentPlay = 5;
     public const int GameStart = 6;
     public const int ReceiveMsg = 7;
-    public const int someoneJoinedAsObserver = 8;
+    public const int EnterObserver = 8;
 
 }

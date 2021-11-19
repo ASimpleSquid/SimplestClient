@@ -26,7 +26,7 @@ public class GameSystemManager : MonoBehaviour
             {
                 Info = go;
             }
-            else if (go.name == "Login")
+            else if (go.name == "LogIn")
             {
                 LogIn = go;
             }
@@ -96,7 +96,7 @@ public class GameSystemManager : MonoBehaviour
     }
     public void updateUserName(string name)
     {
-        Info.GetComponent<Text>().text = name;
+        //Info.GetComponent<Text>().text = name;
     }
     public void LoadPlayer()
     {
@@ -161,8 +161,8 @@ public class GameSystemManager : MonoBehaviour
     }
     public void ChangeState(int newState)
     {
+        
         Join.SetActive(false);
-        LogIn.SetActive(false);
         Generate.SetActive(false);
         Password.SetActive(false);
         Username.SetActive(false);
